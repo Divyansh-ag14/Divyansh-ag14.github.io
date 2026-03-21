@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Divyansh Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+<canvas id="particles-canvas"></canvas>
+<div class="mouse-glow" id="mouse-glow"></div>
+
+<!-- Ambient Background Blob -->
+<div class="ambient-blob ambient-blob-3"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo"><span class="logo-text">D<span class="logo-dot">.</span>A</span></a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="index.html#experience" class="nav-link">Experience</a>
+            <a href="projects.html" class="nav-link active">Projects</a>
+            <a href="index.html#blogs" class="nav-link">Blog</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+            <a href="resume.html" class="nav-link nav-cta">Resume</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Projects -->
+<section class="section projects-hero">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">My Work</span>
+            <h1 class="section-title" style="font-size:3rem;">Featured <span class="gradient-text">Projects</span></h1>
+            <p class="section-subtitle">A collection of things I've built</p>
+            <p class="projects-count" id="projects-count"><span class="gradient-text" style="font-weight:700;">8</span> projects across AI, Healthcare & Data Engineering</p>
+        </div>
+
+        <!-- Sticky Filter Bar -->
+        <div class="filter-bar-sticky" id="filter-bar-sticky">
+            <div class="container">
+                <div class="filter-bar-inner">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <input type="text" id="search-input" placeholder="Search by name, tech stack..." class="search-input">
+                    </div>
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="all">All<span class="filter-count">8</span></button>
+                        <button class="filter-tab" data-filter="LLM Projects">Gen AI / LLMs<span class="filter-count">3</span></button>
+                        <button class="filter-tab" data-filter="Healthcare Related Projects">Healthcare<span class="filter-count">3</span></button>
+                        <button class="filter-tab" data-filter="Data Engineering Projects">Data Eng<span class="filter-count">2</span></button>
+                        <button class="filter-tab" data-filter="Agentic AI">Agentic AI<span class="filter-count">0</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+            <div class="project-card tilt-card reveal" data-categories="LLM Projects" data-tech="python langchain openai streamlit sqlalchemy plotly">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/llm_projects/result/langchain_eda_assistant_result.png" alt="LangChain EDA Assistant" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/LangChain-EDA-Assistant" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Gen AI / LLMs</span>
+                        <h3 class="project-title">LangChain EDA Assistant</h3>
+                        <p class="project-summary">Chatbot for natural language interactions with SQL databases, enabling real-time visualization and data exploration insights.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>LangChain</span><span>OpenAI</span><span>Streamlit</span><span>Plotly</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/LangChain-EDA-Assistant" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/llm_projects/architecture/langchain_eda_assistant_architecture.jpg" alt="Architecture" loading="lazy"><figcaption>System Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="LLM Projects" data-tech="python aws bedrock titan embeddings faiss streamlit">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/llm_projects/result/multimodal_rag_result.png" alt="Multimodal RAG" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/multimodal-rag-system" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Gen AI / LLMs</span>
+                        <h3 class="project-title">Multimodal Food Recommendation RAG</h3>
+                        <p class="project-summary">RAG system combining text and image understanding for personalized recipe suggestions with explainable AI.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>AWS Bedrock</span><span>Titan Embeddings</span><span>FAISS</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/multimodal-rag-system" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/llm_projects/architecture/multimodal_rag_architecture.png" alt="Architecture" loading="lazy"><figcaption>System Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="LLM Projects" data-tech="python openai gpt-4 whisper langchain langgraph faiss">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/llm_projects/result/business_assistant.png" alt="AI Business Assistant" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/ai-business-assistant" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Gen AI / LLMs</span>
+                        <h3 class="project-title">AI Business Assistant</h3>
+                        <p class="project-summary">Multi-step RAG pipeline with LangGraph for PDF Q&A. Supports voice input via Whisper and text chat with transparency into retrieved chunks.</p>
+                        <div class="project-tech">
+                            <span>OpenAI</span><span>LangChain</span><span>LangGraph</span><span>FAISS</span><span>Whisper</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/ai-business-assistant" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/llm_projects/architecture/business_assistant.png" alt="Architecture" loading="lazy"><figcaption>System Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="Healthcare Related Projects" data-tech="python detectron2 opencv pytorch matplotlib">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/healthcare_projects/result/antibio.png" alt="Antibiogram Detector" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/antibiogram-zone-detector" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Healthcare</span>
+                        <h3 class="project-title">Antibiogram Zone Detector</h3>
+                        <p class="project-summary">Automated analysis of bacterial susceptibility zones using image classification, object detection, and pixel-level segmentation.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>Detectron2</span><span>OpenCV</span><span>PyTorch</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/antibiogram-zone-detector" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/healthcare_projects/architecture/antibio.png" alt="Architecture" loading="lazy"><figcaption>Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="Healthcare Related Projects" data-tech="groq whisper llama gradio">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/healthcare_projects/architecture/imagetalk.png" alt="ImageTalk" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/ImageTalk" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Healthcare</span>
+                        <h3 class="project-title">ImageTalk</h3>
+                        <p class="project-summary">Multimodal AI app for voice-based interaction over visual content using Groq, Whisper, and LLaMA for end-to-end speech understanding.</p>
+                        <div class="project-tech">
+                            <span>Groq API</span><span>Whisper</span><span>LLaMA</span><span>Gradio</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/ImageTalk" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="Healthcare Related Projects" data-tech="python pytorch numpy matplotlib scikit-learn resnet">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/healthcare_projects/result/pneumonia.png" alt="Pneumonia Detection" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/medical_imaging/tree/main/Pneumonia_Classification" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Healthcare</span>
+                        <h3 class="project-title">Pneumonia Detection</h3>
+                        <p class="project-summary">Deep learning pipeline using modified ResNet18 for chest X-ray classification with Class Activation Maps for visual interpretability.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>PyTorch</span><span>ResNet18</span><span>CAM</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/medical_imaging/tree/main/Pneumonia_Classification" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="Data Engineering Projects" data-tech="python pandas sql aws s3 glue lambda athena quicksight">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/data_engineering_projects/result/aws_etl_result.png" alt="AWS ETL Pipeline" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/aws-etl-pipeline" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Data Engineering</span>
+                        <h3 class="project-title">AWS ETL Data Pipeline</h3>
+                        <p class="project-summary">End-to-end pipeline to manage, streamline, and analyze YouTube trending data based on categories and metrics.</p>
+                        <div class="project-tech">
+                            <span>Python</span><span>AWS S3</span><span>Glue</span><span>Lambda</span><span>Athena</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/aws-etl-pipeline" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/data_engineering_projects/architecture/aws_etl_architecture.jpeg" alt="Architecture" loading="lazy"><figcaption>Pipeline Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card reveal" data-categories="Data Engineering Projects" data-tech="sql server power bi docker tsql">
+                <div class="project-card-inner">
+                    <div class="project-img-wrapper">
+                        <img src="assets/data_engineering_projects/architecture/sql_datawarehouse_architecture.png" alt="SQL Data Warehouse" loading="lazy">
+                        <div class="project-img-overlay">
+                            <a href="https://github.com/Divyansh-ag14/sql-data-warehouse" target="_blank" class="overlay-btn">View Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <span class="project-category">Data Engineering</span>
+                        <h3 class="project-title">SQL Data Warehouse</h3>
+                        <p class="project-summary">Comprehensive data warehousing solution demonstrating industry best practices from schema design to actionable analytics.</p>
+                        <div class="project-tech">
+                            <span>SQL Server</span><span>Power BI</span><span>Docker</span><span>TSQL</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Divyansh-ag14/sql-data-warehouse" target="_blank" class="project-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                        <button class="project-details-toggle" onclick="toggleDetails(this)">
+                            Architecture <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                    </div>
+                    <div class="project-details">
+                        <div class="details-images">
+                            <figure><img src="assets/data_engineering_projects/architecture/sql_datawarehouse_architecture.png" alt="Architecture" loading="lazy"><figcaption>Warehouse Architecture</figcaption></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="no-results" id="no-results" style="display:none;">
+            <div class="no-results-icon">&#128269;</div>
+            <p>No projects match your search. Try a different keyword or category.</p>
+        </div>
+
+        <!-- Empty state for categories with 0 projects -->
+        <div class="coming-soon" id="coming-soon" style="display:none;">
+            <div class="coming-soon-icon">&#128640;</div>
+            <h3>Coming Soon</h3>
+            <p>Exciting projects in this category are in the works. Check back soon!</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">D<span class="logo-dot">.</span>A</span>
+                <p class="footer-tagline">Building the future with data & AI</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Divyansh-ag14" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/divyanshag14/" target="_blank">LinkedIn</a>
+                <a href="https://medium.com/@divyanshagarwal188" target="_blank">Medium</a>
+                <a href="mailto:divyanshagrwal188@gmail.com">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Divyansh Agarwal. Crafted with care.</p>
+        </div>
+    </div>
+</footer>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<div class="page-transition active" id="page-transition"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

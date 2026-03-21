@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Divyansh Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .resume-page {
+            min-height: 100vh;
+            padding-top: 90px;
+            padding-bottom: 2rem;
+        }
+        .resume-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .resume-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .resume-header p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        .resume-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .resume-viewer {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+        }
+        .resume-viewer iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            display: block;
+        }
+        .resume-fallback {
+            display: none;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .resume-fallback p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- Particles Canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Mouse Follower -->
+<div class="mouse-glow" id="mouse-glow"></div>
+
+<!-- Ambient Background Blob -->
+<div class="ambient-blob ambient-blob-3"></div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-text">D<span class="logo-dot">.</span>A</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#skills" class="nav-link">Skills</a>
+            <a href="index.html#experience" class="nav-link">Experience</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="index.html#blogs" class="nav-link">Blog</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+            <a href="resume.html" class="nav-link nav-cta active">Resume</a>
+        </div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<section class="resume-page">
+    <div class="container">
+        <div class="resume-header">
+            <h1>My <span class="gradient-text">Resume</span></h1>
+            <p>View or download my latest resume</p>
+        </div>
+        <div class="resume-actions">
+            <a href="assets/resume.pdf" download="Divyansh_Agarwal_Resume.pdf" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download PDF</span>
+            </a>
+            <a href="assets/resume.pdf" target="_blank" class="btn btn-outline">
+                <span>Open in New Tab</span>
+            </a>
+        </div>
+        <div class="resume-viewer" id="resume-viewer">
+            <iframe src="assets/resume.pdf" title="Resume"></iframe>
+        </div>
+        <div class="resume-fallback" id="resume-fallback">
+            <p>PDF preview is not supported in your browser.</p>
+            <a href="assets/resume.pdf" download="Divyansh_Agarwal_Resume.pdf" class="btn btn-primary">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<div class="page-transition active" id="page-transition"></div>
+
+<script src="js/main.js"></script>
+<script>
+    // Fallback if iframe fails to load PDF
+    var iframe = document.querySelector('.resume-viewer iframe');
+    iframe.addEventListener('error', function() {
+        document.getElementById('resume-viewer').style.display = 'none';
+        document.getElementById('resume-fallback').style.display = 'block';
+    });
+</script>
+</body>
+</html>
