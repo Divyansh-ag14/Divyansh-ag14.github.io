@@ -373,9 +373,10 @@
                         </div>
                     </div>
                     <ul class="exp-achievements">
-                        <li>Developed a deep learning-based ECG signal processing model for 5-peak detection using PyTorch, achieving 92% accuracy at &plusmn;10 ms tolerance with MAE of 2.46 ms.</li>
-                        <li>Architected a multi-stage deep learning training pipeline incorporating overlapping window segmentation, data augmentation, and multi-source dataset integration to improve robustness and reduce overfitting.</li>
-                        <li>Optimized model performance through feature extraction, signal preprocessing, and evaluation metric tuning, improving inference stability across noisy datasets.</li>
+                        <li>Delivered a deep learning-based 5-peak ECG detection system that reached <strong>0.906 F1@10ms</strong> on held-out test data with <strong>1.7 ms R-peak MAE</strong>, turning a complex biomedical signal-processing problem into an integration-ready ML deliverable.</li>
+                        <li>Built the end-to-end inference pipeline for single-lead ECG signals using a 1D U-Net with a Dilated TCN bottleneck, plus resampling to 500 Hz, 0.5-40 Hz zero-phase bandpass filtering, normalization, and physiological post-processing.</li>
+                        <li>Improved difficult P/T wave localization through targeted training adjustments and robust augmentation, increasing <strong>P/T F1@10ms from 0.53/0.49 to 0.84/0.87</strong> while reducing false positives through beat-sequence enforcement and orphan T-wave removal.</li>
+                        <li>Validated cross-source generalization on external HEMOTAG ECG recordings and packaged the final system into a reusable <code>ECGPeakDetector</code> class, CLI inference script, release bundle, documentation, and demo notebook for downstream handoff.</li>
                     </ul>
                 </div>
             </div>
@@ -393,10 +394,10 @@
                         </div>
                     </div>
                     <ul class="exp-achievements">
-                        <li>Designed and implemented end-to-end ETL pipelines and machine learning workflows, transforming raw enterprise data into structured datasets for predictive analytics.</li>
-                        <li>Performed Market Basket Analysis using association rule mining algorithms, identifying high-value product relationships and generating actionable insights for business strategy.</li>
-                        <li>Increased regression performance by 20% through systematic feature engineering and hyperparameter tuning.</li>
-                        <li>Developed interactive, data-rich dashboards in Panopticon to deliver real-time business intelligence, enabling data driven decision making for stakeholders.</li>
+                        <li>Improved regression model performance by <strong>20%</strong> through systematic feature engineering, experiment iteration, and hyperparameter tuning on enterprise analytics datasets.</li>
+                        <li>Designed end-to-end ETL pipelines and machine learning workflows to convert raw business data into structured, analytics-ready datasets for predictive modeling and reporting.</li>
+                        <li>Performed market basket analysis using association rule mining to identify high-value product relationships and uncover actionable bundling and cross-sell opportunities.</li>
+                        <li>Built interactive Panopticon dashboards for real-time business intelligence, enabling stakeholders to monitor trends faster and make more confident data-driven decisions.</li>
                     </ul>
                 </div>
             </div>
@@ -414,10 +415,10 @@
                         </div>
                     </div>
                     <ul class="exp-achievements">
-                        <li>Built classification and regression machine learning models for churn prediction and dynamic pricing systems, improving predictive accuracy from 82% to 91%.</li>
-                        <li>Developed scalable ML pipelines in Azure ML, enabling automated model training, evaluation, and deployment using Azure Container Registry.</li>
-                        <li>Implemented hybrid recommendation systems combining Word2Vec embeddings and collaborative filtering algorithms, achieving 95% relevance in personalized recommendations.</li>
-                        <li>Integrated LLMs using Langchain to develop intelligent systems like PDF QA bots and text summarizers.</li>
+                        <li>Improved predictive accuracy from <strong>82% to 91%</strong> by building classification and regression models for churn prediction and dynamic pricing across business forecasting use cases.</li>
+                        <li>Developed scalable ML pipelines in Azure ML to automate training, evaluation, and deployment, using Azure Container Registry to support repeatable model delivery workflows.</li>
+                        <li>Implemented a hybrid recommendation system combining Word2Vec embeddings and collaborative filtering, achieving <strong>95% relevance</strong> in personalized recommendations.</li>
+                        <li>Built LangChain-based applications for PDF question answering and text summarization, helping expand the team’s use of LLM-powered workflows for enterprise knowledge access.</li>
                     </ul>
                 </div>
             </div>
@@ -435,9 +436,10 @@
                         </div>
                     </div>
                     <ul class="exp-achievements">
-                        <li>Developed Time Series Forecasting models using SARIMA and Prophet to improve inventory prediction.</li>
-                        <li>Built a seasonality-aware calendar to fine-tune forecasting which increased accuracy by 9%.</li>
-                        <li>Created Power BI dashboards to drive inventory and promo decisions and guided peers in EDA using Seaborn and Matplotlib.</li>
+                        <li>Increased forecast accuracy by <strong>9%</strong> by building a seasonality-aware calendar feature to capture recurring demand patterns in inventory planning workflows.</li>
+                        <li>Developed SARIMA and Prophet forecasting models to improve demand estimation and support more reliable inventory decisions across retail operations.</li>
+                        <li>Created Power BI dashboards for inventory and promotion planning, translating model outputs into operational insights for business stakeholders.</li>
+                        <li>Supported exploratory analysis using Seaborn and Matplotlib to help peers understand demand patterns, model behavior, and feature seasonality.</li>
                     </ul>
                 </div>
             </div>
@@ -490,40 +492,40 @@
         <div class="featured-grid">
             <a href="projects.html" class="featured-card reveal stagger-1">
                 <div class="featured-img">
-                    <img src="assets/llm_projects/result/langchain_eda_assistant_result.png" alt="LangChain EDA Assistant" loading="lazy">
+                    <img src="assets/agentic_ai_projects/result/reasonflow_result.png" alt="ReasonFlow" loading="lazy">
                 </div>
                 <div class="featured-body">
-                    <span class="project-category">Gen AI / LLMs</span>
-                    <h3 class="featured-title">LangChain EDA Assistant</h3>
-                    <p class="featured-desc">Natural language interactions with SQL databases for real-time visualization and data exploration.</p>
+                    <span class="project-category">Agentic AI</span>
+                    <h3 class="featured-title">ReasonFlow</h3>
+                    <p class="featured-desc">Multi-agent orchestration on LangGraph with parallel specialist execution, reflection loops, and optional HITL approvals.</p>
                     <div class="project-tech">
-                        <span>Python</span><span>LangChain</span><span>OpenAI</span><span>Streamlit</span>
+                        <span>Python</span><span>LangGraph</span><span>LangChain</span><span>Streamlit</span><span>OpenAI</span><span>Tavily</span>
                     </div>
                 </div>
             </a>
             <a href="projects.html" class="featured-card reveal stagger-2">
                 <div class="featured-img">
-                    <img src="assets/llm_projects/result/business_assistant.png" alt="AI Business Assistant" loading="lazy">
+                    <img src="assets/data_engineering_projects/architecture/sql_datawarehouse_architecture.png" alt="SQL Data Warehouse" loading="lazy">
                 </div>
                 <div class="featured-body">
-                    <span class="project-category">Gen AI / LLMs</span>
-                    <h3 class="featured-title">AI Business Assistant</h3>
-                    <p class="featured-desc">Multi-step RAG pipeline with LangGraph for PDF Q&A with voice input via Whisper.</p>
+                    <span class="project-category">Data Engineering</span>
+                    <h3 class="featured-title">SQL Data Warehouse</h3>
+                    <p class="featured-desc">Comprehensive warehousing project covering schema design, transformation layers, and analytics-ready data modeling.</p>
                     <div class="project-tech">
-                        <span>OpenAI</span><span>LangGraph</span><span>FAISS</span><span>Whisper</span>
+                        <span>SQL Server</span><span>Power BI</span><span>Docker</span><span>TSQL</span>
                     </div>
                 </div>
             </a>
             <a href="projects.html" class="featured-card reveal stagger-3">
                 <div class="featured-img">
-                    <img src="assets/llm_projects/result/multimodal_rag_result.png" alt="Multimodal RAG" loading="lazy">
+                    <img src="assets/healthcare_projects/result/antibio.png" alt="Antibiogram Zone Detector" loading="lazy">
                 </div>
                 <div class="featured-body">
-                    <span class="project-category">Gen AI / LLMs</span>
-                    <h3 class="featured-title">Multimodal Food RAG</h3>
-                    <p class="featured-desc">RAG system combining text and image understanding for personalized recipe suggestions.</p>
+                    <span class="project-category">Healthcare</span>
+                    <h3 class="featured-title">Antibiogram Zone Detector</h3>
+                    <p class="featured-desc">Automated analysis of bacterial susceptibility zones using detection, segmentation, and image-based measurement.</p>
                     <div class="project-tech">
-                        <span>AWS Bedrock</span><span>Titan</span><span>FAISS</span>
+                        <span>Python</span><span>Detectron2</span><span>OpenCV</span><span>PyTorch</span>
                     </div>
                 </div>
             </a>
