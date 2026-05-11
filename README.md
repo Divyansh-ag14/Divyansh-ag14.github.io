@@ -2,4 +2,4 @@
 
 ## Live Site
 
-Deployed via GitHub Pages: [https://divyansh-ag14.github.io/](https://divyansh-ag14.github.io/)
+Deployed via GitHub Pages: [https://www.divyanshag.com](https://www.divyanshag.com)
