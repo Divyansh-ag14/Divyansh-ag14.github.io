@@ -380,8 +380,10 @@
   const skeleton = document.getElementById('blog-skeleton');
   if (!grid) return;
 
+  const mediumProfile = 'https://medium.com/@div.data';
   const feedUrl =
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@divyanshagarwal188';
+    'https://api.rss2json.com/v1/api.json?rss_url=' +
+    encodeURIComponent('https://medium.com/feed/@div.data');
 
   function stripHtml(html) {
     const tmp = document.createElement('div');
@@ -468,7 +470,7 @@
       grid.innerHTML =
         '<div class="blog-fallback">' +
         '<p>Unable to load blog posts at the moment.</p>' +
-        '<a href="https://medium.com/@divyanshagarwal188" target="_blank" rel="noopener noreferrer">Visit my Medium profile &rarr;</a>' +
+        '<a href="' + mediumProfile + '" target="_blank" rel="noopener noreferrer">Visit my Medium profile &rarr;</a>' +
         '</div>';
     });
 })();
